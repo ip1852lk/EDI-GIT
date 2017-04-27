@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+.ui-widget {font-size:1em;}
+
+#form-dialog label, #form-dialog input {display:block;}
+#form-dialog input.text { margin-bottom:12px; width:95%; padding: .4em; }
+#form-dialog fieldset { padding:0; border:0; margin-top:25px; }
+.ui-widget .ui-widget {font-size:0.8em;}

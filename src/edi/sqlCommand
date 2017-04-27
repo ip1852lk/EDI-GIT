@@ -1,0 +1,49 @@
+--
+-- Table structure for table `us1_user`
+--
+
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE IF NOT EXISTS  `us1_user` (
+  `US1_ID` int(11) NOT NULL AUTO_INCREMENT,
+  `US1_TYPE` int(10) unsigned NOT NULL DEFAULT '0',
+  `US1_LOGIN` varchar(100) DEFAULT NULL,
+  `US1_PASS` varchar(200) DEFAULT NULL,
+  `US1_NAME` varchar(200) DEFAULT NULL,
+  `US1_EMAIL` varchar(200) DEFAULT NULL,
+  `CU1_ID` int(11) DEFAULT NULL,
+  `VD1_ID` int(11) DEFAULT NULL,
+  `US1_CREATED_BY` varchar(10) NOT NULL DEFAULT '',
+  `US1_CREATED_ON` date NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `US1_MODIFIED_BY` varchar(10) NOT NULL DEFAULT '',
+  `US1_MODIFIED_ON` date NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `US1_SHOW_DEFAULT` varchar(1) NOT NULL DEFAULT 'X',
+  PRIMARY KEY (`US1_ID`),
+  KEY `US1_LOGIN` (`US1_LOGIN`),
+  KEY `US1_PASS` (`US1_PASS`),
+  KEY `US1_NAME` (`US1_NAME`),
+  KEY `US1_EMAIL` (`US1_EMAIL`),
+  KEY `CU1_ID` (`CU1_ID`),
+  KEY `US1_SHOW_DEFAULT` (`US1_SHOW_DEFAULT`),
+  KEY `US1_CREATED_BY` (`US1_CREATED_BY`),
+  KEY `US1_CREATED_ON` (`US1_CREATED_ON`),
+  KEY `US1_MODIFIED_BY` (`US1_MODIFIED_BY`),
+  KEY `US1_MODIFIED_ON` (`US1_MODIFIED_ON`),
+  KEY `US1_TYPE` (`US1_TYPE`),
+  KEY `VD1_ID` (`VD1_ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `us1_user`
+--
+
+LOCK TABLES `us1_user` WRITE;
+/*!40000 ALTER TABLE `us1_user` DISABLE KEYS */;
+INSERT INTO `us1_user` VALUES (1,9,'admin','demo','Administrator','Jan.Poehland@comparatio.com',NULL,NULL,'','0000-00-00','','0000-00-00','X'),(2,1,'user','user','User','',1,0,'1','2014-09-26','1','2014-09-26','X'),(3,2,'vendor','vendor','Vendor','',0,5,'1','2014-09-26','1','2014-09-26','X');
+/*!40000 ALTER TABLE `us1_user` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `vd1_vendor`
+--
